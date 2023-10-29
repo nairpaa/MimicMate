@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganti Gambar</title>
+    <style>
+        /* This ensures that the image elements do not exceed the screen size and maintains its aspect ratio. */
+        img#image {
+            display: block;  
+            max-width: 100%;  
+            max-height: 100vh; 
+            width: auto;  
+            height: auto; 
+            margin: auto; 
+        }
+
+        /* This ensures that the body has no margins and the image elements are centered. */
+        body {
+            margin: 0;        
+            display: flex;    
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;    
+            background-color: black; 
+        }
+    </style>
+</head>
+<body>
+    <!-- The initial image is standby.png -->
+    <img id="image" src="images/standby.jpeg" alt="Standby Image">
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            var image = document.getElementById('image');
+
+            // Check the pressed button
+            switch(event.key) {
+                case '1':
+                    image.src = 'images/standby.jpeg';
+                    break;
+                case '2':
+                    image.src = 'images/kedip.jpeg';
+                    break;
+                case '3':
+                    image.src = 'images/mulut.jpeg';
+                    break;
+                case 'q':
+                    image.src = 'images/atas-1.jpeg';
+                    break;
+                case 'w':
+                    image.src = 'images/atas-2.jpeg';
+                    break;
+                case 'e':
+                    image.src = 'images/atas-3.jpeg';
+                    break;
+                case 'a':
+                    image.src = 'images/bawah-1.jpeg';
+                    break;
+                case 's':
+                    image.src = 'images/bawah-2.jpeg';
+                    break;
+                case 'd':
+                    image.src = 'images/bawah-3.jpeg';
+                    break;
+                case 'o':
+                    image.src = 'images/kanan-1.jpeg';
+                    break;
+                case 'p':
+                    image.src = 'images/kanan-2.jpeg';
+                    break;
+                case '[':
+                    image.src = 'images/kanan-3.jpeg';
+                    break;
+                case 'j':
+                    image.src = 'images/kiri-1.jpeg';
+                    break;
+                case 'k':
+                    image.src = 'images/kiri-2.jpeg';
+                    break;
+                case 'l':
+                    image.src = 'images/kiri-3.jpeg';
+                    break;
+                case "'":
+                    image.src = 'images/kiri-5.jpeg';
+                    break;
+                default:
+                    // Return to standby if another key is pressedReturn to standby if another key is pressed
+                    image.src = 'images/standby.jpeg';
+            }
+        });
+    </script>
+</body>
+</html>
